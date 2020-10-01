@@ -42,9 +42,12 @@ th {
 }
 
 td {
-    padding: 1em 0;
-    padding-right: 2em;
+    padding: 2em 0;
     border-bottom: 1px solid lightgray;
+}
+
+td:not(:last-child) {
+    padding-right: 2em;
 }
 
 .btn {
