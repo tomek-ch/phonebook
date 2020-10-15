@@ -1,5 +1,6 @@
 <?php
 
+    require_once('index.php');
     session_start();
 
     $mysqli = new mysqli('localhost', 'root', '', 'phonebook') or die(mysqli_error($mysqli));
@@ -77,5 +78,25 @@
         $_SESSION['msg_type'] = 'save';
 
         header('location: index.php');
+    }
+
+
+    if (!isset($_SESSION['auth'])) {
+        $_SESSION['auth'] = false;
+    }
+
+    if (isset($_POST['login']) && isset($_POST['password'])) {
+
+        if ($_POST['login'] === 'janusz' && $_POST['password'] === 'janusz123') {
+
+            $_SESSION['auth'] = true;
+            header('location: index.php');
+
+        } else {
+
+            $_SESSION['auth'] = false;
+            header('location: auth.php');
+
+        }
     }
 ?>

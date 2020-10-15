@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="index.php" method="post">
+    <form action="process.php" method="POST">
         <label for="login">
             Username:
         </label>

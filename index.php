@@ -10,6 +10,12 @@
     <?php
         require_once 'process.php';
     ?>
+
+    <?php
+        if (!isset($_SESSION['auth']) || !($_SESSION['auth'])) {
+            header('location: auth.php');
+        }
+    ?>
     
     <?php
         $mysqli = new mysqli('localhost', 'root', '', 'phonebook') or die(mysqli_error($mysqli));
