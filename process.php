@@ -70,7 +70,7 @@
             name = '$name',
             description = '$description',
             phone = '$phone',
-            email = '$phone',
+            email = '$email',
             website = '$website' WHERE id = $id") or die($mysqli->error());
         
         $_SESSION['message'] = 'Record has been updated!';
