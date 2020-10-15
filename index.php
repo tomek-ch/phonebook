@@ -75,7 +75,7 @@
         <label for="company-description">
             Description:
         </label>
-        <textarea name="company-description" id="company-description" rows="5" resize>
+        <textarea name="company-description" id="company-description" rows="5">
             <?php echo $description ?>
         </textarea>
         <label for="company-phone-number">
